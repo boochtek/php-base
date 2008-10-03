@@ -1,0 +1,47 @@
+Features
+========
+
+- Simple model-view-controller architecture.
+  - Controller is like the top of a typical PHP file, but without any input.
+  - View is like the bottom of a typical PHP file, containing mostly HTML code.
+  - Model is based on classes that map directly to database tables.
+- Well-defined file layout -- every file belongs in a logical place.
+- Error handler will show a stack trace on-screen and/or email you.
+- Simple way to redirect to another page.
+- Simple way to render output.
+- Separates the layout (outer frame) of a page from the content that varies for each page.
+- Targets PHP 5.2+. May work on a version for PHP 4 as well.
+- Testing framework included.
+  - Probably using SimpleTest, included in a subdir. (TBD)
+
+
+Model Features
+==============
+
+- Light-weight.
+- Follows Active Record pattern.
+  - Database fields are determined from the database tables.
+- Currently works with MySQL.
+  - Will re-write to work with PDO.
+  - Will hopefully retain both versions.
+- Schema defined in an SQL file, with automatic updating to the database schema. (TBD)
+- Migrations (TBD)
+
+
+Controller Features
+===================
+
+- Not much!
+  - Works pretty much like normal PHP.
+- Authentication/authorization. (TBD)
+- Input filtering. (TBD)
+- Form handling. (TBD)
+- Session handling. (TBD - may just have them use the PHP stuff directly)
+
+
+View Features
+=============
+
+- Access to any (global) variable defined in the controller that calls it.
+- Helpers for form elements (such as SELECT drop-downs). (TBD)
+

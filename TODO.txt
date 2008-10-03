@@ -1,0 +1,26 @@
+TODO
+====
+
+- Add a function to determine if we're being run from the command-line.
+- Come up with a good name.
+  - Ideal PHP Micro-framework.
+- Work on BaseModel and DBTable.
+- Work on rendering.
+- Add testing framework.
+  - Probably SimpleTest.
+    - If run from CLI, $test->run(new TextReporter()), else $test->run(new HtmlReporter()).
+    - Command-line (shell or PHP) script to run all the tests.
+    - Has mocks and stubs.
+  - Possibly PHPUnit.
+    - Comes with a phpunit command-line program.
+    - Can generate test scaffolding with phpunit -skeleton ClassUnderTest.
+    - pear install phpunit2 #(2.3.6)
+- Add associations?
+- Authentication/authorization.
+- Input filtering.
+- Form handling.
+- Use PDO instead of MySQL.
+  - Keep MySQL around for PHP 4.
+- Documentation.
+- Pick a license, and add license info to each file.
+- Upload to SourceForge or somewhere.

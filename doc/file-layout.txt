@@ -1,0 +1,61 @@
+===================
+IDEAL PHP FRAMEWORK
+===================
+
+bin             programs and scripts to run on the development or production system
+ generate       generators (similar to Rails generators) go in this directory (be sure to handle SVN/GIT/etc. and deleting as well)
+
+framework       all PHP files that come with the framework (except BaseModel.php, which is in models)
+ test           tests for the framework itself
+ simpletest     testing framework (3rd party) used for testing of the framework, and application-level testing
+
+config          configuration files
+ base.php       either where most of the stuff goes, or pulls in everything else
+ database.php   database type, server, database name, username, password, etc.
+
+doc             documentation for the application (and the framework)
+
+public          files that can be accessed directly by clients (make this your DOCUMENT_ROOT, if possible)
+ abc/xyz.php    application-specific page controller
+ images         image files that are pulled directly into the browser
+ scripts        JavaScript files (or other scripts that get pulled into the browser)
+ stylesheets    CSS stylesheets (or other stylesheets that get pulled into the browser)
+ robots.txt     file to specify how/whether spiders should index us
+ favicon.ico    icon to use in bookmarks (HIGHLY RECOMMENDED - browsers look here very frequently)
+ xxx            you can add any files or subdirectories that you want in here 
+
+includes        application-specific include files (similar to helpers in Rails?)
+
+models          PHP file for each class (auto-loaded)
+ BaseModel.php  BaseModel class -- all models should inherit from this
+ MyClass.php    application-specific code for MyClass class
+
+views           PHP files that get displayed to user
+ abc/xyz.php    generally corresponds to abc/xyz.php controller
+ emails         views that get sent as emails, instead of seen in browser
+ partials       partial views - parts of a page, shared by several views
+
+layouts         common PHP/HTML that encloses (surrounds) a view, so all views have the same general appearance
+ default.php    default layout, that will be used if render() call doesn't specify a layout
+
+database
+ fixtures       contains a file for each table, to load the database with test data
+ schema         ????
+ migrations     ????
+
+test            unit tests to test PHP code
+ models         tests for the model classes
+ controllers    tests for each controller
+ views          tests for each view
+ includes       tests for include files in the 'includes' directory
+
+tmp             temporary files can be put in here
+log             log files can be put in here
+
+
+NOTE: All the directories can have any number of arbitrarily nested directories.
+
+TODO: .htaccess file in top-level, to prevent direct access, except to public (and rewrite everything to public).
+TODO: How does schema dir work?
+TODO: How does migrations dir work?
+
